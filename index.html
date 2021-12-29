@@ -69,10 +69,12 @@
             <li>[<span>Numpad .</span>] - Frame selected objects.</li>
             <li>[<span>Home</span>] - Frame all.</li>
             <li>[<span>x</span>],[<span>y</span>],[<span>z</span>] - Constrain transform along axis.</li>
-            <li>[<span>shift+x</span>],[<span>shift+y</span>],[<span>shift+z</span>] - Constrain transform along plane.</li>
+            <li>[<span>shift+x</span>],[<span>shift+y</span>],[<span>shift+z</span>] - Constrain transform along plane.
+            </li>
             <li>[<span>F3</span>] - Opens command palette. Can search by name.</li>
             <li>[<span>Tab</span>] - Switch between object and edit modes.</li>
-            <li>[<span>1</span>],[<span>2</span>],[<span>3</span>] - Switch between vertices, edges and faces modes.</li>
+            <li>[<span>1</span>],[<span>2</span>],[<span>3</span>] - Switch between vertices, edges and faces modes.
+            </li>
             <li>[<span>L</span>] - Select linked objects.</li>
             <li>[<span>P</span>] - Separate meshes into different objects.</li>
             <li>[<span>J</span>] - Join separate objects into a single one.</li>
@@ -108,7 +110,8 @@
         <p>Using sketches and 2d images as references makes it easier.</p>
         <p>Add image editor to the workspace is interessant.</p>
         <p>Start out of a box, scale to proper size.</p>
-        <p>Multiple ways to create the pointy top. Extrude top face (Key [<span>E</span>]) and merging top vertices together (Key [<span>M</span>]).</p>
+        <p>Multiple ways to create the pointy top. Extrude top face (Key [<span>E</span>]) and merging top vertices
+            together (Key [<span>M</span>]).</p>
         <p>Overlays -> Statistics: Shows vertex/faces etc are selected.</p>
         <p>Scale down bottom face to give a more cartoony cottage shape.</p>
 
@@ -132,8 +135,10 @@
 
         <h3>11. Loop Cuts</h3>
         <p>Toggle X-Ray with [<span>Alt+Z</span>]. Makes it easier to edit objects.</p>
-        <p>Box-select vertices to adjust height. Or [<span>F3</span>] -> Select edge-loop. [<span>Alt+Left Click</span>] Also select edge-loops.</p>
-        <p>Loop cuts [<span>Ctrl+R</span>] objects to create a new loop around the object. Ideally work out with rect objects for that reason.</p>
+        <p>Box-select vertices to adjust height. Or [<span>F3</span>] -> Select edge-loop. [<span>Alt+Left Click</span>]
+            Also select edge-loops.</p>
+        <p>Loop cuts [<span>Ctrl+R</span>] objects to create a new loop around the object. Ideally work out with rect
+            objects for that reason.</p>
         <p>[<span>Right-click</span>] to cancel edge-loop position and set on default positions.</p>
         <p>Delete edges -> Also removes the faces they compose.</p>
         <p>Dissolve edges -> Delete edges but keep the faces.</p>
@@ -144,8 +149,46 @@
         </div>
 
         <h3>12. Separating Objects</h3>
+        <p>When selecting faces in x-ray mode, you need to click closer to the center point.</p>
+        <p>Select roof faces, and duplicate using [<span>Shift+D</span>]</p>
+        <p>Separate them using [<span>P</span>]</p>
+
+        <div class="center">
+            <img class="screen" src="12-separating-objects.png" />
+            <div class="screen">Roof object created from house top faces by duplicating it into a separate object.</div>
+        </div>
+
+
         <h3>13. The Mirror Modifier</h3>
+        <p>Modifiers change object without actually applying changes to the mesh. Can be configured without losing
+            information.</p>
+        <p>Stack on top of each other.</p>
+        <p>Modifiers act relative to the origin (local coordinates).</p>
+        <p>With tool settings enabled (view->tool settings) you can enable options menu.</p>
+        <p>In options menu, you can change so transform only affect object origin. Use this to move object origin
+            around.</p>
+        <p>"Mirror Object" options let you select a different object to use it's origin as reference.</p>
+        <p>Clipping prevents object from overlapping past the mirror. Also glues vertices that touch the mirror. Disable
+            to unglue.</p>
+
+        <div class="center">
+            <img class="screen" src="13-mirror-modifier.png" />
+            <div class="screen">Make mirror symmetric by adding mirror. Duplicate whole house to make top part.</div>
+        </div>
+
         <h3>14. More Mirrors</h3>
+        <p>You can mirror in more than one axis with the same mirror.</p>
+        <p>Toggle Local View (Pressing [<span>Numpad /</span>]) to edit single object centered and hiding other objects.</span>
+        </p>
+        <p>Since top part of the house is kinda simetric, add X and Y mirrors</p>
+        <p>Knife tool [<span>K</span>] to create new edges. If cut wrong and create new vertices, can use merge [<span>M</span>] to
+            fix it.</p>
+
+        <div class="center">
+            <img class="screen" src="14-more-mirrors.png" />
+            <div class="screen">Mirroring top part of house in both X and Y axis since it's more symmetric.</div>
+        </div>
+
         <h3>15. The Solidify Modifier</h3>
         <h3>16. Destructive Modelling</h3>
         <h3>17. </h3>
