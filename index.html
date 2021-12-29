@@ -25,6 +25,10 @@
             color: #ff0099;
         }
 
+        span {
+            color: #ff9900;
+        }
+
         .content {
             background-color: #182533;
             max-width: 800px;
@@ -35,24 +39,43 @@
             text-shadow: #001020DD 3px 3px;
         }
 
-        .screen {}
+        .center {
+            text-align: center;
+        }
+
+        .screen {
+            width: 400px;
+            color: #CCCCCC;
+            margin: auto;
+        }
     </style>
 </head>
 
 <body>
     <div class="content">
         <h1>Udemy Low Poly Landscapes</h1>
-        <a
-            href="https://www.udemy.com/course/blender-low-poly-landscapes/">https://www.udemy.com/course/blender-low-poly-landscapes/</a>
+
+        <ul>
+            <li><a href="https://www.udemy.com/course/blender-low-poly-landscapes/">
+                    Course Page</a></li>
+            <!--<li><a href="#soon">
+                    Completion Certificate</a></li>-->
+        </ul>
 
         <h2>1. Introduction</h2>
 
         <h3>Useful Shortcuts</h3>
         <ul>
-            <li>[Numpad .] - Frame selected objects</li>
-            <li>[Home] - Frame all</li>
-            <li>[x],[y],[z] - Constrain transform along axis</li>
-            <li>[shift+x],[shift+y],[shift+z] - Constrain transform along plane</li>
+            <li>[<span>Numpad .</span>] - Frame selected objects.</li>
+            <li>[<span>Home</span>] - Frame all.</li>
+            <li>[<span>x</span>],[<span>y</span>],[<span>z</span>] - Constrain transform along axis.</li>
+            <li>[<span>shift+x</span>],[<span>shift+y</span>],[<span>shift+z</span>] - Constrain transform along plane.</li>
+            <li>[<span>F3</span>] - Opens command palette. Can search by name.</li>
+            <li>[<span>Tab</span>] - Switch between object and edit modes.</li>
+            <li>[<span>1</span>],[<span>2</span>],[<span>3</span>] - Switch between vertices, edges and faces modes.</li>
+            <li>[<span>L</span>] - Select linked objects.</li>
+            <li>[<span>P</span>] - Separate meshes into different objects.</li>
+            <li>[<span>J</span>] - Join separate objects into a single one.</li>
         </ul>
 
         <h3>Explained concepts</h3>
@@ -68,13 +91,91 @@
                 <li>Shading view</li>
                 <li>Shader node editor</li>
                 <li>Creating materials</li>
-                <li>Using existing materials</li> 
+                <li>Using existing materials</li>
             </ul>
         </ul>
 
+        <div class="center">
+            <img class="screen" src="intro.png" />
+            <div class="screen">Introduction. Adding shared materials between objects.
+                Editing shader in the shading tab.</div>
+        </div>
+
         <h2>2. Basic Modelling</h2>
+
+        <h3>9. Basic House</h3>
+        <p>Blocking out the shapes to have an idea before adding detail.</p>
+        <p>Using sketches and 2d images as references makes it easier.</p>
+        <p>Add image editor to the workspace is interessant.</p>
+        <p>Start out of a box, scale to proper size.</p>
+        <p>Multiple ways to create the pointy top. Extrude top face (Key [<span>E</span>]) and merging top vertices together (Key [<span>M</span>]).</p>
+        <p>Overlays -> Statistics: Shows vertex/faces etc are selected.</p>
+        <p>Scale down bottom face to give a more cartoony cottage shape.</p>
+
+        <div class="center">
+            <img class="screen" src="9-basic-house.png" />
+            <div class="screen">Reference image added to separate window. Result after blocking house shape.</div>
+        </div>
+
+        <h3>10. The Base & Trees</h3>
+        <p>Make sure you are in object mode when adding new shapes.</p>
+        <p>Separate objects by selecting linked mesh if they are merged together by accident.</p>
+        <p>Add cilynder and select amount of vertices before closing the add menu. That's permanent.</p>
+        <p>To create "bowl" shape on top: Extrude top face, then scale it down to create curved surface.</p>
+        <p>After moving/rotating object, use local transforms to transform object without deforming it</p>
+        <p>Add trees by combining cilynders, cones and icospheres.</p>
+
+        <div class="center">
+            <img class="screen" src="10-base-trees.png" />
+            <div class="screen">Add base shape with rounded top, add trees and move/scale house into position.</div>
+        </div>
+
+        <h3>11. Loop Cuts</h3>
+        <p>Toggle X-Ray with [<span>Alt+Z</span>]. Makes it easier to edit objects.</p>
+        <p>Box-select vertices to adjust height. Or [<span>F3</span>] -> Select edge-loop. [<span>Alt+Left Click</span>] Also select edge-loops.</p>
+        <p>Loop cuts [<span>Ctrl+R</span>] objects to create a new loop around the object. Ideally work out with rect objects for that reason.</p>
+        <p>[<span>Right-click</span>] to cancel edge-loop position and set on default positions.</p>
+        <p>Delete edges -> Also removes the faces they compose.</p>
+        <p>Dissolve edges -> Delete edges but keep the faces.</p>
+
+        <div class="center">
+            <img class="screen" src="11-loop-cuts.png" />
+            <div class="screen">Add base shape with rounded top, add trees and move/scale house into position.</div>
+        </div>
+
+        <h3>12. Separating Objects</h3>
+        <h3>13. The Mirror Modifier</h3>
+        <h3>14. More Mirrors</h3>
+        <h3>15. The Solidify Modifier</h3>
+        <h3>16. Destructive Modelling</h3>
+        <h3>17. </h3>
+        <h3>18. </h3>
+        <h3>19. </h3>
+        <h3>20. </h3>
+        <h3>21. </h3>
+        <h3>22. </h3>
+        <h3>23. </h3>
+
         <h2>3. The Landscape</h2>
+        <h3>24. </h3>
+        <h3>25. </h3>
+        <h3>26. </h3>
+        <h3>27. </h3>
+        <h3>28. </h3>
+        <h3>29. </h3>
+        <h3>30. </h3>
+        <h3>31. </h3>
+
         <h2>4. Colour</h2>
+        <h3>32. </h3>
+        <h3>33. </h3>
+        <h3>34. </h3>
+        <h3>35. </h3>
+        <h3>36. </h3>
+        <h3>37. </h3>
+        <h3>38. </h3>
+        <h3>39. </h3>
+        <h3>40. </h3>
 
         <p><a href="https://busta.dev">Ricardo Bustamante &lt;ricardo@busta.dev&gt;</a></p>
     </div>
