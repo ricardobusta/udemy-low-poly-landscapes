@@ -5,28 +5,37 @@
     <style>
         body {
             background-color: #13202D;
-            color: white;
+            color: #DDDDDD;
         }
 
         a {
             color: #00ff99;
             text-decoration: none;
+            text-shadow: #001020DD 3px 3px;
         }
 
         h1 {
             color: #ff9900;
+            text-shadow: #001020DD 3px 3px;
         }
 
         h2 {
             color: #0099FF;
+            text-shadow: #001020DD 3px 3px;
         }
 
         h3 {
             color: #ff0099;
+            text-shadow: #001020DD 3px 3px;
         }
 
         span {
             color: #ff9900;
+            text-shadow: #001020DD 3px 3px;
+        }
+
+        b {
+            color: #FFFFFF;
         }
 
         .content {
@@ -36,7 +45,7 @@
             margin-left: auto;
             margin-right: auto;
             box-shadow: #00102099 5px 5px;
-            text-shadow: #001020DD 3px 3px;
+
         }
 
         .center {
@@ -45,7 +54,7 @@
 
         .screen {
             width: 400px;
-            color: #CCCCCC;
+            color: #AAAAAA;
             margin: auto;
         }
     </style>
@@ -167,7 +176,7 @@
         <p>With tool settings enabled (view->tool settings) you can enable options menu.</p>
         <p>In options menu, you can change so transform only affect object origin. Use this to move object origin
             around.</p>
-        <p>"Mirror Object" options let you select a different object to use it's origin as reference.</p>
+        <p>"<b>Mirror Object</b>" options let you select a different object to use it's origin as reference.</p>
         <p>Clipping prevents object from overlapping past the mirror. Also glues vertices that touch the mirror. Disable
             to unglue.</p>
 
@@ -178,10 +187,12 @@
 
         <h3>14. More Mirrors</h3>
         <p>You can mirror in more than one axis with the same mirror.</p>
-        <p>Toggle Local View (Pressing [<span>Numpad /</span>]) to edit single object centered and hiding other objects.</span>
+        <p>Toggle Local View (Pressing [<span>Numpad /</span>]) to edit single object centered and hiding other
+            objects.</span>
         </p>
         <p>Since top part of the house is kinda simetric, add X and Y mirrors</p>
-        <p>Knife tool [<span>K</span>] to create new edges. If cut wrong and create new vertices, can use merge [<span>M</span>] to
+        <p>Knife tool [<span>K</span>] to create new edges. If cut wrong and create new vertices, can use merge
+            [<span>M</span>] to
             fix it.</p>
 
         <div class="center">
@@ -190,35 +201,179 @@
         </div>
 
         <h3>15. The Solidify Modifier</h3>
+        <p>So far rooves are planes. To add volume, another modifier: <b>Solidify</b></p>
+        <p>Thickness and Offset adjustable.</p>
+        <p>Visibility can be toggled.</p>
+        <p>On cage - Show vertices as if modifier is applied. Helps selecting original vertices, but as if they were in
+            the final position. Also work with mirror, but commands are still relative to the actual vertice.</p>
+        <p>Solidify values are scaled with the object. Applying the scale makes the object with scale 1,1,1.
+            [<span>Ctrl+A</span>]</p>
+        <p>Applying modifier changes the mesh permanently. Good for making further changes without the modifier
+            constraints.</p>
+
+        <div class="center">
+            <img class="screen" src="15-solidify-modifier.png" />
+            <div class="screen">Solidified roof now has volume.</div>
+        </div>
+
         <h3>16. Destructive Modelling</h3>
-        <h3>17. </h3>
-        <h3>18. </h3>
-        <h3>19. </h3>
-        <h3>20. </h3>
-        <h3>21. </h3>
-        <h3>22. </h3>
-        <h3>23. </h3>
+        <p>Small shifts into edges and vertices to increase randomness.</p>
+        <p>Select vertes in-between two vertices: [<span>Ctrl+Click</span>]. Also work for edges and faces.</p>
+        <p>Apply mirror modifier to edit asymetrically.</p>
+        <p>Applying modifier is a destructive modelling since you lose your original model.</p>
+
+        <div class="center">
+            <img class="screen" src="16-destructive-modelling.png" />
+            <div class="screen">Now the house has asymetric deforming.</div>
+        </div>
+
+        <h3>17. Modelling the Beams</h3>
+
+        <p>Apply same techniques as before: Add new shape, start from cube, scale and divide loops etc. Duplicate to add
+            another beam to the top part of the house.</p>
+        <p>Rotate object in object mode if you intend to use local axis when moving things locally.</p>
+        <p>Make sure object parts are not sticking out of the model while doing so.</p>
+
+        <div class="center">
+            <img class="screen" src="17-modelling-beams.png" />
+            <div class="screen">Beams were modelled after single cubes to match edges in the house.</div>
+        </div>
+
+        <h3>18. Efficient Modelling</h3>
+        <p>Create remaining beams using cube extrusion technique.</p>
+        <p>Be careful with double extrusion, this creates faces with area 0.</p>
+        <p>Sekect whole mesh, press [<span>M</span>] to merge -> Merge by distance.</p>
+        <p>Scaling can distort shapes. Still possible to scale by the normals. Select shape then [<span>Alt+S</span>]</p>
+        <p>Enable normal visualizations: Overlays -> View Normals</p>
+        <p>[<span>Shift+N</span>] to re-calculate normals. Possible to flip then inside.</p>
+        <div class="center">
+            <img class="screen" src="18" />
+            <div class="screen">...</div>
+        </div>
+
+        <h3>19. The Knife Tool</h3>
+        <div class="center">
+            <img class="screen" src="19" />
+            <div class="screen">...</div>
+        </div>
+
+        <h3>20. The Window Frames</h3>
+        <div class="center">
+            <img class="screen" src="20" />
+            <div class="screen">...</div>
+        </div>
+
+        <h3>21. The Door</h3>
+        <div class="center">
+            <img class="screen" src="21" />
+            <div class="screen">...</div>
+        </div>
+
+        <h3>22. The Pipe</h3>
+        <div class="center">
+            <img class="screen" src="22" />
+            <div class="screen">...</div>
+        </div>
+
+        <h3>23. The Lamp</h3>
+        <div class="center">
+            <img class="screen" src="23" />
+            <div class="screen">...</div>
+        </div>
 
         <h2>3. The Landscape</h2>
-        <h3>24. </h3>
-        <h3>25. </h3>
-        <h3>26. </h3>
-        <h3>27. </h3>
-        <h3>28. </h3>
-        <h3>29. </h3>
-        <h3>30. </h3>
-        <h3>31. </h3>
 
-        <h2>4. Colour</h2>
-        <h3>32. </h3>
-        <h3>33. </h3>
-        <h3>34. </h3>
-        <h3>35. </h3>
-        <h3>36. </h3>
-        <h3>37. </h3>
-        <h3>38. </h3>
-        <h3>39. </h3>
-        <h3>40. </h3>
+        <h3>24. The Triangle Tree</h3>
+        <div class="center">
+            <img class="screen" src="24" />
+            <div class="screen">...</div>
+        </div>
+
+        <h3>25. Collections</h3>
+        <div class="center">
+            <img class="screen" src="25" />
+            <div class="screen">...</div>
+        </div>
+
+        <h3>26. The Round Tree</h3>
+        <div class="center">
+            <img class="screen" src="26" />
+            <div class="screen">...</div>
+        </div>
+
+        <h3>27. The Base</h3>
+        <div class="center">
+            <img class="screen" src="27" />
+            <div class="screen">...</div>
+        </div>
+
+        <h3>28. Booleans</h3>
+        <div class="center">
+            <img class="screen" src="28" />
+            <div class="screen">...</div>
+        </div>
+
+        <h3>29. Paving & Rocks</h3>
+        <div class="center">
+            <img class="screen" src="29" />
+            <div class="screen">...</div>
+        </div>
+
+        <h3>30. Grass & Plants</h3>
+        <div class="center">
+            <img class="screen" src="30" />
+            <div class="screen">...</div>
+        </div>
+
+        <h3>31. More Plants</h3>
+        <div class="center">
+            <img class="screen" src="32" />
+            <div class="screen">...</div>
+        </div>
+
+        <h2>4. Color</h2>
+
+        <h3>33. Adding Color</h3>
+        <div class="center">
+            <img class="screen" src="33" />
+            <div class="screen">...</div>
+        </div>
+
+        <h3>34. Adding Multiple Materials to Objects</h3>
+        <div class="center">
+            <img class="screen" src="34" />
+            <div class="screen">...</div>
+        </div>
+
+        <h3>35. Cyvles vs Eevee</h3>
+        <div class="center">
+            <img class="screen" src="35" />
+            <div class="screen">...</div>
+        </div>
+
+        <h3>36. Adding Lights</h3>
+        <div class="center">
+            <img class="screen" src="36" />
+            <div class="screen">...</div>
+        </div>
+
+        <h3>37. Creating Atmosphere</h3>
+        <div class="center">
+            <img class="screen" src="37" />
+            <div class="screen">...</div>
+        </div>
+
+        <h3>38. Details</h3>
+        <div class="center">
+            <img class="screen" src="38" />
+            <div class="screen">...</div>
+        </div>
+
+        <h3>39. Render & Composition</h3>
+        <div class="center">
+            <img class="screen" src="39" />
+            <div class="screen">...</div>
+        </div>
 
         <p><a href="https://busta.dev">Ricardo Bustamante &lt;ricardo@busta.dev&gt;</a></p>
     </div>
