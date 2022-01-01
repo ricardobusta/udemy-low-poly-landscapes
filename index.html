@@ -87,6 +87,7 @@
             <li>[<span>L</span>] - Select linked objects.</li>
             <li>[<span>P</span>] - Separate meshes into different objects.</li>
             <li>[<span>J</span>] - Join separate objects into a single one.</li>
+            <li>[<span>Ctrl+X</span>] - Dissolve selected.</li>
         </ul>
 
         <h3>Explained concepts</h3>
@@ -242,36 +243,60 @@
         <h3>18. Efficient Modelling</h3>
         <p>Create remaining beams using cube extrusion technique.</p>
         <p>Be careful with double extrusion, this creates faces with area 0.</p>
-        <p>Sekect whole mesh, press [<span>M</span>] to merge -> Merge by distance.</p>
-        <p>Scaling can distort shapes. Still possible to scale by the normals. Select shape then [<span>Alt+S</span>]</p>
+        <p>Select whole mesh, press [<span>M</span>] to merge -> Merge by distance.</p>
+        <p>Scaling can distort shapes. Still possible to scale by the normals. Select shape then [<span>Alt+S</span>]
+        </p>
         <p>Enable normal visualizations: Overlays -> View Normals</p>
         <p>[<span>Shift+N</span>] to re-calculate normals. Possible to flip then inside.</p>
         <div class="center">
             <img class="screen" src="18-efficient-modelling.png" />
-            <div class="screen">...</div>
+            <div class="screen">Finishing house beams. Merging 0 area faces and such to optimize mesh. Speeding up
+                workflow using mirror and other techniques.</div>
         </div>
 
         <h3>19. The Knife Tool</h3>
+        <p>Use knife tool [<span>K</span>] to cut out window and door shapes into the house faces.</p>
+        <p>Avoid non-planar N-gons. When they get triangulated things can get weird.</p>
+        <p>While cutting, you can press [<span>E</span>] to start out a new shape before applying.</p>
+        <p>Cut out faces to divide n-gons into quads if you plan to delete portions of a face. Enforce triangulation
+            happens in a controlled manner.</p>
+
         <div class="center">
-            <img class="screen" src="19" />
-            <div class="screen">...</div>
+            <img class="screen" src="19-knife-tool.png" />
+            <div class="screen">Cutting out windows in the face, and also tidying up the mesh to keep the triangulation
+                well behaved.</div>
         </div>
 
         <h3>20. The Window Frames</h3>
+        <p>Multiple ways, like extruding out multiple times until achieving the desired shape.</p>
+        <p>Duplicate [<span>Ctrl+D</span>] window and door edges like we did with the roof. Then extrude
+            [<span>E</span>] and scale [<span>S</span>] to create volume.</p>
+        <p>When using volume modifier, make sure normals are facing in the right direction.</p>
+        <p>If whole shape is duplicated, you can delete <b>Only Faces</b> to keep the edge loop.</p>
+        <p>Face direction visualizations, show blue when facing you, red when facing backwards.</p>
+
         <div class="center">
-            <img class="screen" src="20" />
-            <div class="screen">...</div>
+            <img class="screen" src="20-window-frames.png" />
+            <div class="screen">Adding window frames by multiple techniques: Mirror and Solidify modifiers, extrusion and knife tool.</div>
         </div>
 
         <h3>21. The Door</h3>
+        <p>Just exercizing what I learned in previous lessons.</p>
         <div class="center">
-            <img class="screen" src="21" />
-            <div class="screen">...</div>
+            <img class="screen" src="21-the-door.png" />
+            <div class="screen">Adding door by copying mesh, adding wood and a icosphere for the handle.</div>
         </div>
 
         <h3>22. The Pipe</h3>
+        <p>Extrude + right click to cancel movement, then Scale to make a shorter connection.</p>
+        <p>Extruding + moving or rotating the extruded face can cause distortion.</p>
+        <p>Can get better results with bevel command. Create rough shape then [<span>Ctrl + B</span>] on edge-loops to create intermediates.</p>
+        <p>To create a pipe-joint from a edge-loop, bevel->extrude->scale by normal</p>
+        <p>Creating the tip with same technique. Scaling top vertices down to 0 -> keep topology, can still select face-loop.</p>
+        <p>Merge vertices by distance when finished.</p>
+        <p>If it does not look low poly enough, select even edge-loops alongside the desired axis, and Ctrl+X to dissolve them.</p>
         <div class="center">
-            <img class="screen" src="22" />
+            <img class="screen" src="22-the-pipe.png" />
             <div class="screen">...</div>
         </div>
 
