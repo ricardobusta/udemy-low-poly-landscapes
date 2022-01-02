@@ -77,8 +77,8 @@
         <ul>
             <li>[<span>Numpad .</span>] - Frame selected objects.</li>
             <li>[<span>Home</span>] - Frame all.</li>
-            <li>[<span>x</span>],[<span>y</span>],[<span>z</span>] - Constrain transform along axis.</li>
-            <li>[<span>shift+x</span>],[<span>shift+y</span>],[<span>shift+z</span>] - Constrain transform along plane.
+            <li>[<span>X</span>],[<span>Y</span>],[<span>Z</span>] - Constrain transform along axis.</li>
+            <li>[<span>Shift X</span>],[<span>Shift Y</span>],[<span>Shift Z</span>] - Constrain transform along plane.
             </li>
             <li>[<span>F3</span>] - Opens command palette. Can search by name.</li>
             <li>[<span>Tab</span>] - Switch between object and edit modes.</li>
@@ -87,7 +87,7 @@
             <li>[<span>L</span>] - Select linked objects.</li>
             <li>[<span>P</span>] - Separate meshes into different objects.</li>
             <li>[<span>J</span>] - Join separate objects into a single one.</li>
-            <li>[<span>Ctrl+X</span>] - Dissolve selected.</li>
+            <li>[<span>Ctrl X</span>] - Dissolve selected.</li>
         </ul>
 
         <h3>Explained concepts</h3>
@@ -144,10 +144,10 @@
         </div>
 
         <h3>11. Loop Cuts</h3>
-        <p>Toggle X-Ray with [<span>Alt+Z</span>]. Makes it easier to edit objects.</p>
-        <p>Box-select vertices to adjust height. Or [<span>F3</span>] -> Select edge-loop. [<span>Alt+Left Click</span>]
+        <p>Toggle X-Ray with [<span>Alt Z</span>]. Makes it easier to edit objects.</p>
+        <p>Box-select vertices to adjust height. Or [<span>F3</span>] -> Select edge-loop. [<span>Alt Left Click</span>]
             Also select edge-loops.</p>
-        <p>Loop cuts [<span>Ctrl+R</span>] objects to create a new loop around the object. Ideally work out with rect
+        <p>Loop cuts [<span>Ctrl R</span>] objects to create a new loop around the object. Ideally work out with rect
             objects for that reason.</p>
         <p>[<span>Right-click</span>] to cancel edge-loop position and set on default positions.</p>
         <p>Delete edges -> Also removes the faces they compose.</p>
@@ -160,7 +160,7 @@
 
         <h3>12. Separating Objects</h3>
         <p>When selecting faces in x-ray mode, you need to click closer to the center point.</p>
-        <p>Select roof faces, and duplicate using [<span>Shift+D</span>]</p>
+        <p>Select roof faces, and duplicate using [<span>Shift D</span>]</p>
         <p>Separate them using [<span>P</span>]</p>
 
         <div class="center">
@@ -208,7 +208,7 @@
         <p>On cage - Show vertices as if modifier is applied. Helps selecting original vertices, but as if they were in
             the final position. Also work with mirror, but commands are still relative to the actual vertice.</p>
         <p>Solidify values are scaled with the object. Applying the scale makes the object with scale 1,1,1.
-            [<span>Ctrl+A</span>]</p>
+            [<span>Ctrl A</span>]</p>
         <p>Applying modifier changes the mesh permanently. Good for making further changes without the modifier
             constraints.</p>
 
@@ -219,7 +219,7 @@
 
         <h3>16. Destructive Modelling</h3>
         <p>Small shifts into edges and vertices to increase randomness.</p>
-        <p>Select vertes in-between two vertices: [<span>Ctrl+Click</span>]. Also work for edges and faces.</p>
+        <p>Select vertes in-between two vertices: [<span>Ctrl Click</span>]. Also work for edges and faces.</p>
         <p>Apply mirror modifier to edit asymetrically.</p>
         <p>Applying modifier is a destructive modelling since you lose your original model.</p>
 
@@ -244,10 +244,10 @@
         <p>Create remaining beams using cube extrusion technique.</p>
         <p>Be careful with double extrusion, this creates faces with area 0.</p>
         <p>Select whole mesh, press [<span>M</span>] to merge -> Merge by distance.</p>
-        <p>Scaling can distort shapes. Still possible to scale by the normals. Select shape then [<span>Alt+S</span>]
+        <p>Scaling can distort shapes. Still possible to scale by the normals. Select shape then [<span>Alt S</span>]
         </p>
         <p>Enable normal visualizations: Overlays -> View Normals</p>
-        <p>[<span>Shift+N</span>] to re-calculate normals. Possible to flip then inside.</p>
+        <p>[<span>Shift N</span>] to re-calculate normals. Possible to flip then inside.</p>
         <div class="center">
             <img class="screen" src="18-efficient-modelling.png" />
             <div class="screen">Finishing house beams. Merging 0 area faces and such to optimize mesh. Speeding up
@@ -269,7 +269,7 @@
 
         <h3>20. The Window Frames</h3>
         <p>Multiple ways, like extruding out multiple times until achieving the desired shape.</p>
-        <p>Duplicate [<span>Ctrl+D</span>] window and door edges like we did with the roof. Then extrude
+        <p>Duplicate [<span>Ctrl D</span>] window and door edges like we did with the roof. Then extrude
             [<span>E</span>] and scale [<span>S</span>] to create volume.</p>
         <p>When using volume modifier, make sure normals are facing in the right direction.</p>
         <p>If whole shape is duplicated, you can delete <b>Only Faces</b> to keep the edge loop.</p>
@@ -291,13 +291,14 @@
         <h3>22. The Pipe</h3>
         <p>Extrude + right click to cancel movement, then Scale to make a shorter connection.</p>
         <p>Extruding + moving or rotating the extruded face can cause distortion.</p>
-        <p>Can get better results with bevel command. Create rough shape then [<span>Ctrl + B</span>] on edge-loops to
+        <p>Can get better results with bevel command. Create rough shape then [<span>Ctrl B</span>] on edge-loops to
             create intermediates.</p>
         <p>To create a pipe-joint from a edge-loop, bevel->extrude->scale by normal</p>
         <p>Creating the tip with same technique. Scaling top vertices down to 0 -> keep topology, can still select
             face-loop.</p>
         <p>Merge vertices by distance when finished.</p>
-        <p>If it does not look low poly enough, select even edge-loops alongside the desired axis, and Ctrl+X to
+        <p>If it does not look low poly enough, select even edge-loops alongside the desired axis, and [<span>Ctrl
+                X</span>] to
             dissolve them.</p>
         <div class="center">
             <img class="screen" src="22-the-pipe.png" />
@@ -319,7 +320,8 @@
         <h2>3. The Landscape</h2>
 
         <h3>24. The Triangle Tree</h3>
-        <p>Hide objects with [<span>H</span>] or all objects with [<span>Shift+H</span>] and Unhide with [<span>Alt+H</span>]</p>
+        <p>Hide objects with [<span>H</span>] or all objects with [<span>Shift H</span>] and Unhide with
+            [<span>Alt H</span>]</p>
         <p>Sculpting tab adds a lot of new tools. Multiple brushes e.g. grab brush.</p>
         <p>Three categories of brushes, blue red and yellow.</p>
         <p>Blue add or subtract from the mesh. Red smooth out things, and yellow deforms it.</p>
@@ -332,33 +334,52 @@
         </div>
 
         <h3>25. Collections</h3>
-        <div class="center">
-            <img class="screen" src="25" />
-            <div class="screen">...</div>
-        </div>
+        <p>Select object, press [<span>.</span>] will highlight the object in the outliner.</p>
+        <p>Holding [<span>Ctrl RMB</span>] can let you select objects using the lasso selection.</p>
+        <p>[<span>M</span>] to move object into collection.</p>
+        <p>Collections can be moved around and nested in the outliner.</p>
+        <p>Labelling and naming objects, and organization is a matter of how your work pipeline work.</p>
 
         <h3>26. The Round Tree</h3>
+        <p>Creating branch in trunk: Extrude multiple faces and round things up a bit. </p>
+        <p>Alt: Extrude one face, and use loop cut to make it rounder.</p>
+        <p>Proportional editing [<span>O</span>] lets you drag adjacent vertices when dragging. Circle of influence can
+            be adjusted with [<span>Mouse Wheel</span>]</p>
+        <p>Remesh: Useful when sculpting and do not have enough vertices. Use voxels.</p>
+        <p>[<span>Shift A</span>] to scale voxels and have a preview of their sizes.</p>
+        <p>Use decimate to bring the vertex count back to close the original.</p>
         <div class="center">
-            <img class="screen" src="26" />
-            <div class="screen">...</div>
+            <img class="screen" src="26-round-tree.png" />
+            <div class="screen">Add round tree using technique to extrude another branch and use sculpt to make the top
+                part.</div>
         </div>
 
         <h3>27. The Base</h3>
+        <p>Separate the top face from the bottom. Select center face and press [<span>Ctrl +</span>] to grow selection.
+            [<span>Ctrl -]</span>] to shrink selection.</p>
         <div class="center">
-            <img class="screen" src="27" />
-            <div class="screen">...</div>
+            <img class="screen" src="27-the-base.png" />
+            <div class="screen">Use of previously learned techniques to create jagged mesh for base.</div>
         </div>
 
         <h3>28. Booleans</h3>
+        <p>Boolean modifier to cut out a hole to make the pond. Need another shape to be the cutter.</p>
+        <p>Object properties in the cutter -> Viewport Display -> Display as: Wireframe. Now you can see the cut.</p>
+        <p>Can click on the camera icon in the outliner window to not render the cutter.</p>
+        <p>If modifier is not applied, make sure everything is selected (including cutter) when moving shapes around.
+        </p>
         <div class="center">
-            <img class="screen" src="28" />
-            <div class="screen">...</div>
+            <img class="screen" src="28-booleans.png" />
+            <div class="screen">Using boolean op to carve the pond shape in the ground.</div>
         </div>
 
         <h3>29. Paving & Rocks</h3>
+        <p>Snapping tools to snap one object into the other. E.g. face, rotation to target.</p>
+        <p>Can snap individual vertices as well.</p>
         <div class="center">
-            <img class="screen" src="29" />
-            <div class="screen">...</div>
+            <img class="screen" src="29-paving-and-rocks.png" />
+            <div class="screen">Pavement created from quads, subdivided and then solidified. Other rocks are just part
+                of trees squished and scaled.</div>
         </div>
 
         <h3>30. Grass & Plants</h3>
