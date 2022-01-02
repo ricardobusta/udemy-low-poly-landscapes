@@ -67,8 +67,8 @@
         <ul>
             <li><a href="https://www.udemy.com/course/blender-low-poly-landscapes/">
                     Course Page</a></li>
-            <!--<li><a href="#soon">
-                    Completion Certificate</a></li>-->
+            <li><a href="https://www.udemy.com/certificate/UC-68fae866-0a9c-4f9c-95db-c78361c9adb3/">
+                    Completion Certificate</a></li>
         </ul>
 
         <h2>1. Introduction</h2>
@@ -88,6 +88,7 @@
             <li>[<span>P</span>] - Separate meshes into different objects.</li>
             <li>[<span>J</span>] - Join separate objects into a single one.</li>
             <li>[<span>Ctrl X</span>] - Dissolve selected.</li>
+            <li>[<span>Ctrl Alt Numpad 0] - Move selected camera to current view.</span></li>
         </ul>
 
         <h3>Explained concepts</h3>
@@ -383,7 +384,8 @@
         </div>
 
         <h3>30. Grass & Plants</h3>
-        <p>[<span>Alt D</span>] creates an instance copy (Duplicate Linked). Changes made in any instance is mirroed to the original object.</p>
+        <p>[<span>Alt D</span>] creates an instance copy (Duplicate Linked). Changes made in any instance is mirroed to
+            the original object.</p>
         <p>Select -> Select linked to select all objects created from linked duplicates.</p>
         <p>Can use plane and intersect boolean to create water surface.</p>
         <div class="center">
@@ -392,53 +394,123 @@
         </div>
 
         <h3>31. More Plants</h3>
+        <p>Make origin in the base of the leaf, and link duplicate leaves make creating the plant shape faster.</p>
+        <p>[<span>Shift S</span>] helps setting the cursor to a specific vertex or selection. Then move origin to cursor
+            position.</p>
+        <p>[<span>Shift R</span>] repeats last rotation action</p>
+        <p>Create face on edge-loop: [<span>F</span>]. With edit mode and face mode selected, you can right click object
+            and "poke faces" to subtivide n-gons.</p>
+        <p>Holding control to snap.</p>
+        <p>Hint from design: To fill up spaces nicely, use around 3 copies of an object.</p>
         <div class="center">
-            <img class="screen" src="32" />
-            <div class="screen">...</div>
+            <img class="screen" src="31-more-plants.png" />
+            <div class="screen">Adding lilies, big plants and chimney smoke.</div>
         </div>
 
         <h2>4. Color</h2>
 
         <h3>33. Adding Color</h3>
+        <p>Back to shading tab.</p>
+        <p>Picking right color right away can be tricky due to lighting. Over time practice will help predict results.
+        </p>
+        <p>[<span>Ctrl L</span>] to link object materials.</p>
+        <p>Creating around 3 color variations for repeated objects to make it more random.</p>
+        <p>Change roughness to make it more/less metalic.</p>
         <div class="center">
-            <img class="screen" src="33" />
-            <div class="screen">...</div>
+            <img class="screen" src="33-adding-color.png" />
+            <div class="screen">Adding color based in the reference material.</div>
         </div>
 
         <h3>34. Adding Multiple Materials to Objects</h3>
+        <p>Create new material slots in the object.</p>
+        <p>Assign material slot by selecting faces in edit mode.</p>
+        <p>Change emission to make glowing windows and lamp.</p>
+        <p>For the ground part to work, we need to apply the decimate modifier to assing material to specific faces.</p>
         <div class="center">
-            <img class="screen" src="34" />
-            <div class="screen">...</div>
+            <img class="screen" src="34-multiple-materials-one-object.png" />
+            <div class="screen">Adding multiple materials to a single object. Windows, lamp and dirt.</div>
         </div>
 
         <h3>35. Cyvles vs Eevee</h3>
+        <p>Pressing [<span>Keypad 0</span>] shows a preview of the render in the camera perspective.</p>
+        <p>Render properties tab to change render configurations.</p>
+        <p>Eevee: More flat, faster local lighting rendering.</p>
+        <p>Cycles: Ray-tracing based rendering.</p>
+        <p>We can enable some things to make Eevee look more realistig. E.g. enable Bloom to make lighting look better.
+        </p>
+        <p>Add denoiser to make Cycles look better (takes more time).</p>
+        <p>Material preview mode uses Eevee, but has lighting setup.</p>
+        <p>In shading editor, select World instead of object to change world material.</p>
+        <p>We can use HDRI to light up scenes. Can get some from <a href="polyhaven.com">polyhaven.com</a>.</p>
+        <p>[<span>Shift A</span>] to add an environment texture and hook it up to Background.</p>
         <div class="center">
-            <img class="screen" src="35" />
-            <div class="screen">...</div>
+            <img class="screen" src="35-eevee-test.png" />
+            <div class="screen">Render with Eevee engine.</div>
+        </div>
+        <div class="center">
+            <img class="screen" src="35-cycles-test.png" />
+            <div class="screen">Render with Cycles engine.</div>
         </div>
 
         <h3>36. Adding Lights</h3>
+        <p>Disable background added by HDRI: Render properties -> Film -> Transparent</p>
+        <p>Adding point lights to windows and lamp can simulate light for Eevee.</p>
+        <p>Sun light to add shadows and light to all elements.</p>
+        <p>Play around with light properties to achieve desired effect.</p>
         <div class="center">
-            <img class="screen" src="36" />
-            <div class="screen">...</div>
+            <img class="screen" src="36-adding-lights.png" />
+            <div class="screen">Adding more lights to make Eevee render looks nicer.</div>
         </div>
 
         <h3>37. Creating Atmosphere</h3>
+        <p>Using a grayish HDRI helps with settling with object colors.</p>
+        <p>Picking up more vibrant colors help to add atmosphere. Nice when sun matches the scene sun position.</p>
+        <p>Sun color change mood. Early morning: blueish, late evening: orangeish.</p>
+        <p>Adding more suns to give different moods.</p>
+        <p>Blue light technique keeps things darker, but still allows you to see.</p>
         <div class="center">
-            <img class="screen" src="37" />
-            <div class="screen">...</div>
+            <img class="screen" src="37-morning-bright.png" />
+            <div class="screen">Morning image with very bright lights and light blue tone.</div>
+        </div>
+
+        <div class="center">
+            <img class="screen" src="37-late-orange.png" />
+            <div class="screen">End of day with orange sun and more horizontal shadows due to setting sun.</div>
+        </div>
+
+        <div class="center">
+            <img class="screen" src="37-night-dark.png" />
+            <div class="screen">Just lighting from the house.</div>
+        </div>
+
+        <div class="center">
+            <img class="screen" src="37-night-blue.png" />
+            <div class="screen">Adding bluish light to simulate darkness in a bright environment.</div>
         </div>
 
         <h3>38. Details</h3>
+        <p>Round some edges using bevel, and use bevel and knife tool to create gaps in the ceiling.</p>
+        <p>[<span>G G</span>] will do edge-slide when editing vertexes.</p>
+        <p>[<span>Ctrl B</span>] to start bevel on vertex, then [<span>V</span>] to take a chip off the edge. [<span>Ctrl Shift B</span>] does the same.</p>
+        <p>When selecting 2 opposite vertices in a newly created face, we can press [<span>J</span>] to join those vertices and split the face in two.</p>
         <div class="center">
-            <img class="screen" src="38" />
-            <div class="screen">...</div>
+            <img class="screen" src="38-details.png" />
+            <div class="screen">Adding some details to the scenes, like chipping off wood and cutting roof.</div>
         </div>
 
         <h3>39. Render & Composition</h3>
+        <p>View options -> View Lock -> Lock camera to View -> When pressing [Numpad 0] you can drag camera around with the view. Makes it easier to position camera.</p>
+        <p>Possible to add background using compositor. Compositing tab and use nodes.</p>
+        <p>Can add a background with an image node, and mix it with Mix node. Add viewer node to preview the result. Use render alpha as factor to blend images.</p>
+        <p>Pressing [M] can "Mute" a node and see the difference it makes.</p>
         <div class="center">
-            <img class="screen" src="39" />
-            <div class="screen">...</div>
+            <img class="screen" src="39-render-and-composting-a.png" />
+            <div class="screen">Compositing nodes.</div>
+        </div>
+
+        <div class="center">
+            <img class="screen" src="39-render-and-composting.png" />
+            <div class="screen">Compositing result.</div>
         </div>
 
         <p><a href="https://busta.dev">Ricardo Bustamante &lt;ricardo@busta.dev&gt;</a></p>
