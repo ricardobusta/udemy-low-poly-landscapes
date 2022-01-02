@@ -73,7 +73,7 @@
                     View Result Realtime</a></li>
         </ul>
 
-        <h2>1. Introduction</h2>
+        <h2 id="section-1">1. Introduction</h2>
 
         <h3>Useful Shortcuts</h3>
         <ul>
@@ -116,9 +116,9 @@
                 Editing shader in the shading tab.</div>
         </div>
 
-        <h2>2. Basic Modelling</h2>
+        <h2 id="section-2">2. Basic Modelling</h2>
 
-        <h3>9. Basic House</h3>
+        <h3 id="9">9. Basic House</h3>
         <p>Blocking out the shapes to have an idea before adding detail.</p>
         <p>Using sketches and 2d images as references makes it easier.</p>
         <p>Adding image editor to the workspace is interessant.</p>
@@ -133,7 +133,7 @@
             <div class="screen">Reference image added to separate window. Result after blocking house shape.</div>
         </div>
 
-        <h3>10. The Base & Trees</h3>
+        <h3 id="10">10. The Base & Trees</h3>
         <p>Make sure you are in object mode when adding new shapes.</p>
         <p>Separate objects by selecting linked mesh if they are merged together by accident.</p>
         <p>Add cilynder and select amount of vertices before closing the add menu. That's permanent.</p>
@@ -146,7 +146,7 @@
             <div class="screen">Add base shape with rounded top, add trees and move/scale house into position.</div>
         </div>
 
-        <h3>11. Loop Cuts</h3>
+        <h3 id="11">11. Loop Cuts</h3>
         <p>Toggle X-Ray with [<span>Alt Z</span>]. Makes it easier to edit objects.</p>
         <p>Box-select vertices to adjust height. Or [<span>F3</span>] -> Select edge-loop. [<span>Alt Left Click</span>]
             Also select edge-loops.</p>
@@ -161,7 +161,7 @@
             <div class="screen">Add base shape with rounded top, add trees and move/scale house into position.</div>
         </div>
 
-        <h3>12. Separating Objects</h3>
+        <h3 id="12">12. Separating Objects</h3>
         <p>When selecting faces in x-ray mode, you need to click closer to the center point.</p>
         <p>Select roof faces, and duplicate using [<span>Shift D</span>]</p>
         <p>Separate them using [<span>P</span>]</p>
@@ -172,7 +172,7 @@
         </div>
 
 
-        <h3>13. The Mirror Modifier</h3>
+        <h3 id="13">13. The Mirror Modifier</h3>
         <p>Modifiers change object without actually applying changes to the mesh. Can be configured without losing
             information.</p>
         <p>Stack on top of each other.</p>
@@ -189,7 +189,7 @@
             <div class="screen">Make mirror symmetric by adding mirror. Duplicate whole house to make top part.</div>
         </div>
 
-        <h3>14. More Mirrors</h3>
+        <h3 id="14">14. More Mirrors</h3>
         <p>You can mirror in more than one axis with the same mirror.</p>
         <p>Toggle Local View (Pressing [<span>Numpad /</span>]) to edit single object centered and hiding other
             objects.</span>
@@ -204,7 +204,7 @@
             <div class="screen">Mirroring top part of house in both X and Y axis since it's more symmetric.</div>
         </div>
 
-        <h3>15. The Solidify Modifier</h3>
+        <h3 id="15">15. The Solidify Modifier</h3>
         <p>So far rooves are planes. To add volume, another modifier: <b>Solidify</b></p>
         <p>Thickness and Offset adjustable.</p>
         <p>Visibility can be toggled.</p>
@@ -220,7 +220,7 @@
             <div class="screen">Solidified roof now has volume.</div>
         </div>
 
-        <h3>16. Destructive Modelling</h3>
+        <h3 id="16">16. Destructive Modelling</h3>
         <p>Small shifts into edges and vertices to increase randomness.</p>
         <p>Select vertes in-between two vertices: [<span>Ctrl Click</span>]. Also work for edges and faces.</p>
         <p>Apply mirror modifier to edit asymetrically.</p>
@@ -231,7 +231,7 @@
             <div class="screen">Now the house has asymetric deforming.</div>
         </div>
 
-        <h3>17. Modelling the Beams</h3>
+        <h3 id="17">17. Modelling the Beams</h3>
 
         <p>Apply same techniques as before: Add new shape, start from cube, scale and divide loops etc. Duplicate to add
             another beam to the top part of the house.</p>
@@ -243,7 +243,7 @@
             <div class="screen">Beams were modelled after single cubes to match edges in the house.</div>
         </div>
 
-        <h3>18. Efficient Modelling</h3>
+        <h3 id="18">18. Efficient Modelling</h3>
         <p>Create remaining beams using cube extrusion technique.</p>
         <p>Be careful with double extrusion, this creates faces with area 0.</p>
         <p>Select whole mesh, press [<span>M</span>] to merge -> Merge by distance.</p>
@@ -257,7 +257,7 @@
                 workflow using mirror and other techniques.</div>
         </div>
 
-        <h3>19. The Knife Tool</h3>
+        <h3 id="19">19. The Knife Tool</h3>
         <p>Use knife tool [<span>K</span>] to cut out window and door shapes into the house faces.</p>
         <p>Avoid non-planar N-gons. When they get triangulated things can get weird.</p>
         <p>While cutting, you can press [<span>E</span>] to start out a new shape before applying.</p>
@@ -270,7 +270,7 @@
                 well behaved.</div>
         </div>
 
-        <h3>20. The Window Frames</h3>
+        <h3 id="20">20. The Window Frames</h3>
         <p>Multiple ways, like extruding out multiple times until achieving the desired shape.</p>
         <p>Duplicate [<span>Ctrl D</span>] window and door edges like we did with the roof. Then extrude
             [<span>E</span>] and scale [<span>S</span>] to create volume.</p>
@@ -284,14 +284,14 @@
                 and knife tool.</div>
         </div>
 
-        <h3>21. The Door</h3>
+        <h3 id="21">21. The Door</h3>
         <p>Just exercizing what I learned in previous lessons.</p>
         <div class="center">
             <img class="screen" src="21-the-door.png" />
             <div class="screen">Adding door by copying mesh, adding wood and a icosphere for the handle.</div>
         </div>
 
-        <h3>22. The Pipe</h3>
+        <h3 id="22">22. The Pipe</h3>
         <p>Extrude + right click to cancel movement, then Scale to make a shorter connection.</p>
         <p>Extruding + moving or rotating the extruded face can cause distortion.</p>
         <p>Can get better results with bevel command. Create rough shape then [<span>Ctrl B</span>] on edge-loops to
@@ -309,7 +309,7 @@
             </div>
         </div>
 
-        <h3>23. The Lamp</h3>
+        <h3 id="23">23. The Lamp</h3>
         <p>Pressing Z to swap around render modes</p>
         <p>Instead of extruding and then scaling a face down, we can use inset instead [<span>I</span>]</p>
         <p>If multiple faces are selected, it can look weird. Pressing [<span>I</span>] again will toggle to individual
@@ -320,9 +320,9 @@
             <div class="screen">Using inset tool to carve lamp glass portion.</div>
         </div>
 
-        <h2>3. The Landscape</h2>
+        <h2 id="section-3">3. The Landscape</h2>
 
-        <h3>24. The Triangle Tree</h3>
+        <h3 id="24">24. The Triangle Tree</h3>
         <p>Hide objects with [<span>H</span>] or all objects with [<span>Shift H</span>] and Unhide with
             [<span>Alt H</span>]</p>
         <p>Sculpting tab adds a lot of new tools. Multiple brushes e.g. grab brush.</p>
@@ -336,14 +336,14 @@
             <div class="screen">Tree created from various blobs put together using the sculpt tool.</div>
         </div>
 
-        <h3>25. Collections</h3>
+        <h3 id="25">25. Collections</h3>
         <p>Select object, press [<span>.</span>] will highlight the object in the outliner.</p>
         <p>Holding [<span>Ctrl RMB</span>] can let you select objects using the lasso selection.</p>
         <p>[<span>M</span>] to move object into collection.</p>
         <p>Collections can be moved around and nested in the outliner.</p>
         <p>Labelling and naming objects, and organization is a matter of how your work pipeline work.</p>
 
-        <h3>26. The Round Tree</h3>
+        <h3 id="26">26. The Round Tree</h3>
         <p>Creating branch in trunk: Extrude multiple faces and round things up a bit. </p>
         <p>Alt: Extrude one face, and use loop cut to make it rounder.</p>
         <p>Proportional editing [<span>O</span>] lets you drag adjacent vertices when dragging. Circle of influence can
@@ -357,7 +357,7 @@
                 part.</div>
         </div>
 
-        <h3>27. The Base</h3>
+        <h3 id="27">27. The Base</h3>
         <p>Separate the top face from the bottom. Select center face and press [<span>Ctrl +</span>] to grow selection.
             [<span>Ctrl -]</span>] to shrink selection.</p>
         <div class="center">
@@ -365,7 +365,7 @@
             <div class="screen">Use of previously learned techniques to create jagged mesh for base.</div>
         </div>
 
-        <h3>28. Booleans</h3>
+        <h3 id="28">28. Booleans</h3>
         <p>Boolean modifier to cut out a hole to make the pond. Need another shape to be the cutter.</p>
         <p>Object properties in the cutter -> Viewport Display -> Display as: Wireframe. Now you can see the cut.</p>
         <p>Can click on the camera icon in the outliner window to not render the cutter.</p>
@@ -376,7 +376,7 @@
             <div class="screen">Using boolean op to carve the pond shape in the ground.</div>
         </div>
 
-        <h3>29. Paving & Rocks</h3>
+        <h3 id="29">29. Paving & Rocks</h3>
         <p>Snapping tools to snap one object into the other. E.g. face, rotation to target.</p>
         <p>Can snap individual vertices as well.</p>
         <div class="center">
@@ -385,7 +385,7 @@
                 of trees squished and scaled.</div>
         </div>
 
-        <h3>30. Grass & Plants</h3>
+        <h3 id="30">30. Grass & Plants</h3>
         <p>[<span>Alt D</span>] creates an instance copy (Duplicate Linked). Changes made in any instance is mirroed to
             the original object.</p>
         <p>Select -> Select linked to select all objects created from linked duplicates.</p>
@@ -395,7 +395,7 @@
             <div class="screen">Water grass blades and water surface added.</div>
         </div>
 
-        <h3>31. More Plants</h3>
+        <h3 id="31">31. More Plants</h3>
         <p>Make origin in the base of the leaf, and link duplicate leaves make creating the plant shape faster.</p>
         <p>[<span>Shift S</span>] helps setting the cursor to a specific vertex or selection. Then move origin to cursor
             position.</p>
@@ -409,9 +409,9 @@
             <div class="screen">Adding lilies, big plants and chimney smoke.</div>
         </div>
 
-        <h2>4. Color</h2>
+        <h2 id="section-4">4. Color</h2>
 
-        <h3>33. Adding Color</h3>
+        <h3 id="33">33. Adding Color</h3>
         <p>Back to shading tab.</p>
         <p>Picking right color right away can be tricky due to lighting. Over time practice will help predict results.
         </p>
@@ -423,7 +423,7 @@
             <div class="screen">Adding color based in the reference material.</div>
         </div>
 
-        <h3>34. Adding Multiple Materials to Objects</h3>
+        <h3 id="34">34. Adding Multiple Materials to Objects</h3>
         <p>Create new material slots in the object.</p>
         <p>Assign material slot by selecting faces in edit mode.</p>
         <p>Change emission to make glowing windows and lamp.</p>
@@ -433,7 +433,7 @@
             <div class="screen">Adding multiple materials to a single object. Windows, lamp and dirt.</div>
         </div>
 
-        <h3>35. Cyvles vs Eevee</h3>
+        <h3 id="35">35. Cyvles vs Eevee</h3>
         <p>Pressing [<span>Keypad 0</span>] shows a preview of the render in the camera perspective.</p>
         <p>Render properties tab to change render configurations.</p>
         <p>Eevee: More flat, faster local lighting rendering.</p>
@@ -454,7 +454,7 @@
             <div class="screen">Render with Cycles engine.</div>
         </div>
 
-        <h3>36. Adding Lights</h3>
+        <h3 id="36">36. Adding Lights</h3>
         <p>Disable background added by HDRI: Render properties -> Film -> Transparent</p>
         <p>Adding point lights to windows and lamp can simulate light for Eevee.</p>
         <p>Sun light to add shadows and light to all elements.</p>
@@ -464,7 +464,7 @@
             <div class="screen">Adding more lights to make Eevee render looks nicer.</div>
         </div>
 
-        <h3>37. Creating Atmosphere</h3>
+        <h3 id="37">37. Creating Atmosphere</h3>
         <p>Using a grayish HDRI helps with settling with object colors.</p>
         <p>Picking up more vibrant colors help to add atmosphere. Nice when sun matches the scene sun position.</p>
         <p>Sun color change mood. Early morning: blueish, late evening: orangeish.</p>
@@ -490,7 +490,7 @@
             <div class="screen">Adding bluish light to simulate darkness in a bright environment.</div>
         </div>
 
-        <h3>38. Details</h3>
+        <h3 id="38">38. Details</h3>
         <p>Round some edges using bevel, and use bevel and knife tool to create gaps in the ceiling.</p>
         <p>[<span>G G</span>] will do edge-slide when editing vertexes.</p>
         <p>[<span>Ctrl B</span>] to start bevel on vertex, then [<span>V</span>] to take a chip off the edge. [<span>Ctrl Shift B</span>] does the same.</p>
@@ -500,7 +500,7 @@
             <div class="screen">Adding some details to the scenes, like chipping off wood and cutting roof.</div>
         </div>
 
-        <h3>39. Render & Composition</h3>
+        <h3 id="39">39. Render & Composition</h3>
         <p>View options -> View Lock -> Lock camera to View -> When pressing [Numpad 0] you can drag camera around with the view. Makes it easier to position camera.</p>
         <p>Possible to add background using compositor. Compositing tab and use nodes.</p>
         <p>Can add a background with an image node, and mix it with Mix node. Add viewer node to preview the result. Use render alpha as factor to blend images.</p>
